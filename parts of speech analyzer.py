@@ -65,7 +65,6 @@ def POSanalyzer(user_input):
     while True:
         posList = []
         taggedWords = dict(nltk.pos_tag(word_tokenize(user_input)))
-        print(taggedWords)
         print('\nHere is a list of the parts of speech:', pos, '\n')
         input1 = input("Which parts of speech would you like to know is in your text? ")
         print()
@@ -87,7 +86,6 @@ def POSanalyzer(user_input):
             if userPOS:
                 for a, b in pos.items():
                     if b == userPOS:
-                        print(b)
                         partofSpeech = b
                         partofSpeechsymbol = a
                         for c, d in taggedWords.items():
